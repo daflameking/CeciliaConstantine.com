@@ -20,3 +20,8 @@ function navFlex() {
         }
     });
 }
+
+/*
+* TODO: 
+* Swap mouse icon for pointer on smaller devices
+*/
