@@ -6,11 +6,12 @@ $(document).ready(function(){
 function showNav() {
     $("#mobile-menu").on("click", (function () {
         $("#overlay").toggle();
-}));
-$("#overlay a").on("click", function (){
-    $("#overlay").toggle(false);
-});
+    }));
+    $("#overlay a").on("click", function (){
+        $("#overlay").toggle(false);
+    });
 }
+
 // toggle display true =show element and false=hide element
 function navFlex() {
     $("#overlay").toggle( function(){
@@ -19,16 +20,3 @@ function navFlex() {
         }
     });
 }
-
-//     newFunction();
-
-// function newFunction() {
-//     if ($("#overlay").toggle(true)) {
-//         $("#overlay").css("display", "flex");
-//     }
-//     else {
-//         $("#overlay").css("display", "none"); 
-//     }
-// }
-//$("#overlay").append("#contact-details");
-
