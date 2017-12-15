@@ -311,7 +311,7 @@ footer {
   .vertical-align {
     margin: 8% 0;
   }
-
+  padding: 0;
   p:not(first-of-type) {
     padding: 0 10%;
     margin: 0;
@@ -347,7 +347,12 @@ footer {
   nav { flex-direction: row; 
     a { padding: 0 4%; }
   }
+  .flex-item-1 { order: 1;}
+  .flex-item-2 { order: 2;}
 }
-@media screen and (min-width: screen(md)) {
+@media screen and (min-width: screen(lg)) {
   h1 { font-size: lg-text(desktop); }
+  figure { width: 50%; }
+  #projects div { display: flex; }
+  #projects .vertical-align { width: 50%; }
 }

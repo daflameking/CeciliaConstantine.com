@@ -13,7 +13,6 @@ function showNav() {
     });
 }
 
-// toggle display true =show element and false=hide element
 function navFlex() {
     $("#overlay").toggle( function(){
         if ( $(this).toggle(true) ){
