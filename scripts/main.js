@@ -1,6 +1,7 @@
 $(document).ready(function(){
     showNav(); 
     navFlex();
+    changeScrollerIcon();
 });
 
 function showNav() {
@@ -20,8 +21,12 @@ function navFlex() {
         }
     });
 }
-
-/*
-* TODO: 
-* Swap mouse icon for pointer on smaller devices
-*/
+    
+ function changeScrollerIcon(){
+    if ($(window).width() >= 650 ){
+        $("#scroll-icon").attr("src","assets/icons/001-mouse-clicker.png");
+    }
+    else {
+        $("#scroll-icon").attr("src","assets/icons/013-hand.png");
+    }
+ };
