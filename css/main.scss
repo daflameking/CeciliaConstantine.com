@@ -308,24 +308,23 @@ footer {
   min-height: 100vh;
 }
 #projects {
-  .vertical-align {
-    margin: 8% 0;
-  }
   padding: 0;
-  p:not(first-of-type) {
-    padding: 0 10%;
-    margin: 0;
-  }
-  .btn-default {
-    border:2px solid $dark-teal;
-    border-radius: 5px;
-    padding: 2% 4%;
-    margin: 3% 0;
-    text-transform: text(caps);
-    font: {
-    weight: text(heavy);
-    size: text(small);
-  }
+    header { margin: 8% 0; }
+    .vertical-align { margin: 0; }
+    p:not(first-of-type) {
+      padding: 0 10%;
+      margin: 0;
+    }
+    .btn-default {
+      border:2px solid $dark-teal;
+      border-radius: 5px;
+      padding: 1% 4%;
+      margin: 3% 0;
+      text-transform: text(caps);
+      font: {
+      weight: text(heavy);
+      size: text(small);
+    }
     transition: background-color 0.2s ease-in, color 0.2s ease-in; 
     &:hover {
       color: $white;
