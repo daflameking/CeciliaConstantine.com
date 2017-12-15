@@ -316,6 +316,22 @@ footer {
     padding: 0 10%;
     margin: 0;
   }
+  .btn-default {
+    border:2px solid $dark-teal;
+    border-radius: 5px;
+    padding: 2% 4%;
+    margin: 3% 0;
+    text-transform: text(caps);
+    font: {
+    weight: text(heavy);
+    size: text(small);
+  }
+    transition: background-color 0.2s ease-in, color 0.2s ease-in; 
+    &:hover {
+      color: $white;
+      background-color: $dark-teal;
+    }
+  }
 }
 #mobile-menu {
   position: fixed;
