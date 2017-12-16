@@ -29,3 +29,11 @@ function navFlex() {
         $("#scroll-icon").attr("src","assets/icons/013-hand.png");
     }
  };
+
+ /*
+ * TODO:
+    1. When fixed mobile icon is over the #home section, #mobile-menu background fades transparent
+    2. Add validation to contact form (see formspree.io)
+    3. Turn browser window tab different color on mobile devices
+    4. Explore image loading with emergence.js
+*/
