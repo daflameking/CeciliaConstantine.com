@@ -204,7 +204,7 @@ nav {
 		text-decoration: none;
 		color:  $white;
     font: {
-      size: text(xlarge);
+      size: text(small);
       family: text(normal);
       weight: text(heavy);
     }
@@ -308,24 +308,23 @@ footer {
   min-height: 100vh;
 }
 #projects {
-  .vertical-align {
-    margin: 8% 0;
-  }
   padding: 0;
-  p:not(first-of-type) {
-    padding: 0 10%;
-    margin: 0;
-  }
-  .btn-default {
-    border:2px solid $dark-teal;
-    border-radius: 5px;
-    padding: 2% 4%;
-    margin: 3% 0;
-    text-transform: text(caps);
-    font: {
-    weight: text(heavy);
-    size: text(small);
-  }
+    header { margin: 8% 0; }
+    .vertical-align { margin: 0; }
+    p:not(first-of-type) {
+      padding: 0 10%;
+      margin: 0;
+    }
+    .btn-default {
+      border:2px solid $dark-teal;
+      border-radius: 5px;
+      padding: 1% 4%;
+      margin: 3% 0;
+      text-transform: text(caps);
+      font: {
+      weight: text(heavy);
+      size: text(small);
+    }
     transition: background-color 0.2s ease-in, color 0.2s ease-in; 
     &:hover {
       color: $white;
@@ -353,21 +352,27 @@ footer {
 }
 @media screen and (min-width: screen(sm)) {
   h1 {  font-size: lg-text(tablet); }
+  nav a { font-size: text(medium); }
+}
+@media screen and (min-width: screen(md)) {
   #mobile-menu { 
     width: 80px;
     height: 80px;
-  }
-}
-@media screen and (min-width: screen(md)) {
+  }  
   h1 { font-size:lg-text(laptop); }
-  nav { flex-direction: row; 
-    a { padding: 0 4%; }
+  nav { 
+    flex-direction: row; 
+    a { 
+      padding: 0 4%;
+      font-size: text(large);
+    }
   }
   .flex-item-1 { order: 1;}
   .flex-item-2 { order: 2;}
 }
 @media screen and (min-width: screen(lg)) {
   h1 { font-size: lg-text(desktop); }
+  nav a { font-size: text(xlarge); }
   figure { width: 50%; }
   #projects div { display: flex; }
   #projects .vertical-align { width: 50%; }
