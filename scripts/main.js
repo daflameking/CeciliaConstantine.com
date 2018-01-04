@@ -35,10 +35,20 @@ function navFlex() {
      var currentYear = new Date().getFullYear();
     document.getElementById("copy-year").innerHTML = currentYear;  
  }
+
+document.addEventListener("scroll", function () {
+    var menu = document.getElementById("mobile-menu");
+    if (document.body.scrollTop >= 605) {
+        menu.style.background = "#eb8cb6";
+        }
+        else {
+        menu.style.background = "transparent";
+        }
+});
+
+
  /*
  * TODO:
-    1. When fixed mobile icon is over the #home section, #mobile-menu background fades transparent
-    2. Add validation to contact form (see formspree.io)
-    3. Turn browser window tab different color on mobile devices
-    4. Explore image loading with emergence.js
+    1. Add validation to contact sform (see formspree.io)
+    2. Explore image loading with emergence.js
 */

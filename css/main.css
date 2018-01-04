@@ -314,7 +314,7 @@ footer {
   height: 50px;
   border-radius: 50%;
   border: transparent;
-  background: #eb8cb6;
+  background: transparent;
   z-index: 1000;
   outline: none;
 }
@@ -375,6 +375,4 @@ footer {
     width: 50%;
   }
 }
- 
-
- /*# sourceMappingURL= main.css.map */
+/*# sourceMappingURL=main.css.map */
