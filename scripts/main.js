@@ -2,6 +2,7 @@ $(document).ready(function(){
     showNav(); 
     navFlex();
     changeScrollerIcon();
+    printCurrentYear();
 });
 
 function showNav() {
@@ -29,3 +30,8 @@ function navFlex() {
         $("#scroll-icon").attr("src","assets/icons/013-hand.png");
     }
  };
+
+ function printCurrentYear () {
+     var currentYear = new Date().getFullYear();
+    document.getElementById("copy-year").innerHTML = currentYear;  
+ }
