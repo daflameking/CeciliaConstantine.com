@@ -24,10 +24,10 @@ function navFlex() {
     
  function changeScrollerIcon(){
     if ($(window).width() >= 650 ){
-        $("#scroll-icon").attr("src","assets/icons/001-mouse-clicker.png");
+        $("#scroll-icon").attr("src","src/assets/icons/001-mouse-clicker.png");
     }
     else {
-        $("#scroll-icon").attr("src","assets/icons/013-hand.png");
+        $("#scroll-icon").attr("src","src/assets/icons/013-hand.png");
     }
  };
 
