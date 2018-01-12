@@ -17,7 +17,7 @@ $sea-green: #05e5ef;
 $dark-teal: #18c5c3;
 $blue: rgba(17,113,200,1);
 $dark-grey: #555;
-$light-grey: #f9f9f9;
+$light-grey: rgba(153, 153, 153, 0.133);
 
 
 /************ Animations *************/
@@ -260,7 +260,12 @@ ul {
   div { padding: 0; }
 }
 
-.social-icons {  display: inline-flex; }
+.social-icons {  
+  display: inline-flex;
+  position: absolute;
+  bottom: 10%;
+  justify-content: center;
+}
 
 .vertical-align { @extend %center-whole; }
 
@@ -278,11 +283,14 @@ ul {
   color: $white;
 
   ul { 
-    margin: 3% 0;
-    @extend %center;
+    margin-top: 3%;
     line-height: 1.5;
     padding: 0; 
-    a:hover { color: $dark-teal;}
+    @extend %center;
+
+    a { font-size: text(small); }  
+    
+    a:hover { color: $dark-teal; }
   }
   
   p,

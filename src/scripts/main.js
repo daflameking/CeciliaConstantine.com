@@ -15,8 +15,6 @@ function showNav() {
     var social = document.getElementById("social-icons");
     var mobile = document.getElementById("mobile-social-icons");
     mobile.append(social);  
-    mobile.style.position = "absolute";
-    mobile.style.bottom = "5%";
 }
 
 function navFlex() {
@@ -37,7 +35,7 @@ function navFlex() {
  };
 
  function printCurrentYear () {
-     var currentYear = new Date().getFullYear();
+    var currentYear = new Date().getFullYear();
     document.getElementById("copy-year").innerHTML = currentYear;  
  }
 
@@ -45,10 +43,10 @@ document.addEventListener("scroll", function () {
     var menu = document.getElementById("mobile-menu");
     if (document.body.scrollTop >= 605) {
         menu.style.background = "#eb8cb6";
-        }
-        else {
-        menu.style.background = "transparent";
-        }
+    }
+    else {
+    menu.style.background = "transparent";
+    }
 });
 
 
