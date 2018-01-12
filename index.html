@@ -50,6 +50,7 @@ which introduces Java, Eclipse, and how to write flow charts, pseudocode, algori
   <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="src/css/main.css">
+  <link rel="stylesheet" href="src/css/animate.css">
   <script
   src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
@@ -64,7 +65,6 @@ which introduces Java, Eclipse, and how to write flow charts, pseudocode, algori
     * Add Fullscreen API so browser address bar is hidden in mobile devices: https://developers.google.com/web/fundamentals/native-hardware/fullscreen/
     * See proper staging platform to minify/beautfy/properly lint before deploying to prod site
     * See how you can make this baby more accessible
-    * Add gradient to luxury buttons
     * Add mobile menu animation
     * Add download resume option
     * Input google voice contact
@@ -72,13 +72,13 @@ which introduces Java, Eclipse, and how to write flow charts, pseudocode, algori
     * Add services section: web development, front end design, SEO, etc
     * Add favicon/retina icons - pink circle with white C
 -->
-    <nav id="overlay">
+    <nav id="overlay" class="animated bounceIn">
       <h2 class="banner">Cecilia Constantine</h2>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <!-- Social Icons -->
-      <div id="mobile-social-icons" class="btn-group social-icons"></div>      
+      <!-- Loads when nav is toggled -->
+      <div id="nav-social-icons" class="btn-group social-icons"></div>      
     </nav>
 
     <main>
@@ -93,7 +93,7 @@ which introduces Java, Eclipse, and how to write flow charts, pseudocode, algori
       <h1>Cecilia Constantine</h1>
 
     <!-- Social Icons -->
-    <div id="social-icons" class="btn-group social-icons">
+    <!-- <div class="btn-group social-icons">
         <a title="Free Code Camp" href="https://www.freecodecamp.com/ceciliaconsta3" target="_blank" class="btn">
           <i class="fa fa-fire fa-4x"></i></a>
         <a title="GitHub" href="https://www.github.com/ceciliaconsta3" target="_blank" class="btn">
@@ -104,7 +104,7 @@ which introduces Java, Eclipse, and how to write flow charts, pseudocode, algori
           <i class="fa fa-linkedin fa-4x"></i></a>
         <a title="Twitter" href="https://twitter.com/ceciliaconsta3/" target="_blank" class="btn">
           <i class="fa fa-twitter fa-4x"></i></a>
-      </div>
+      </div> -->
     <img id="scroll-icon" alt="Scroll down" src="src/assets/icons/013-hand.png">
   </section>
 
@@ -203,7 +203,7 @@ which introduces Java, Eclipse, and how to write flow charts, pseudocode, algori
       </ul> 
 
     <!-- Social Icons -->
-    <div class="btn-group social-icons">
+    <div id="social-icons" class="btn-group social-icons">
       <a title="Free Code Camp" href="https://www.freecodecamp.com/ceciliaconsta3" target="_blank" class="btn">
         <i class="fa fa-fire fa-4x"></i></a>
       <a title="GitHub" href="https://www.github.com/ceciliaconsta3" target="_blank" class="btn">

@@ -1,3 +1,4 @@
+// Load before other elements so user doesn't see the switch
 $(window).ready( function() {
     changeScrollerIcon();
 });
@@ -6,6 +7,7 @@ $(document).ready(function(){
     showNav(); 
     navFlex();
     printCurrentYear();
+    duplicate();
 });
 
 function showNav() {
@@ -15,10 +17,15 @@ function showNav() {
     $("#overlay a").on("click", function (){
         $("#overlay").toggle(false);
     });
-    var social = document.getElementById("social-icons");
-    var mobile = document.getElementById("mobile-social-icons");
-    mobile.append(social);  
 }
+
+// function duplicate () {
+//     var x = document.getElementById("social-icons");
+//     var clone = x.cloneNode(true);
+//     var navDiv = document.getElementById("overlay");
+//     document.navDiv.appendChild(clone);  
+// }
+
 
 function navFlex() {
     $("#overlay").toggle( function(){
@@ -42,8 +49,9 @@ function navFlex() {
     document.getElementById("copy-year").innerHTML = currentYear;  
  }
 
-document.addEventListener("scroll", function () {
-    var menu = document.getElementById("mobile-menu");
+
+ var menu = document.getElementById("mobile-menu");
+ document.addEventListener("scroll", function () {
     if (document.body.scrollTop >= 605) {
         menu.style.background = "#eb8cb6";
         menu.style.boxShadow = "1px 2px 7px #888";
