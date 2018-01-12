@@ -20,9 +20,9 @@ Cecilia Camille Constantine
 "A journey of a thousand miles begins with a single step - Lao Tzu"
 
 What's New: 
-ITPALOOZA December 7,2017
-Had a great time volunteering, meeting old and new faces, 
-and listening to the outstanding tech panels and presentations
+New term, new language
+Taking C169: Scripting and Programming 
+which introduces Java, Eclipse, and how to write flow charts, pseudocode, algorithms, and other programming fundamentals
 -->  
 
 <html class="no-js"> <!--<![endif]-->
@@ -50,6 +50,7 @@ and listening to the outstanding tech panels and presentations
   <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="src/css/main.css">
+  <link rel="stylesheet" href="src/css/animate.css">
   <script
   src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
@@ -62,27 +63,22 @@ and listening to the outstanding tech panels and presentations
 <!-- 
   TODO: 
     * Add Fullscreen API so browser address bar is hidden in mobile devices: https://developers.google.com/web/fundamentals/native-hardware/fullscreen/
-    * See gitignore and proper staging platform to minify/beautfy/properly lint before deploying to prod site
+    * See proper staging platform to minify/beautfy/properly lint before deploying to prod site
     * See how you can make this baby more accessible
-    * Make project images click through
-    * Move email link closer to text
-    * Add gradient to luxury buttons
     * Add mobile menu animation
     * Add download resume option
     * Input google voice contact
-    * Increase font size of mobile-menu on smaller devices
-    * increase overall site font size for larger monitors
-    * Fix slow loading on scroll icon change
     * Add better descriptions and technology stack in projects
     * Add services section: web development, front end design, SEO, etc
-    * Make #about slightly darker grey
     * Add favicon/retina icons - pink circle with white C
 -->
-    <nav id="overlay">
+    <nav id="overlay" class="animated bounceIn">
       <h2 class="banner">Cecilia Constantine</h2>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+      <!-- Loads when nav is toggled -->
+      <div id="nav-social-icons" class="btn-group social-icons"></div>      
     </nav>
 
     <main>
@@ -97,7 +93,7 @@ and listening to the outstanding tech panels and presentations
       <h1>Cecilia Constantine</h1>
 
     <!-- Social Icons -->
-    <div class="btn-group social-icons">
+    <!-- <div class="btn-group social-icons">
         <a title="Free Code Camp" href="https://www.freecodecamp.com/ceciliaconsta3" target="_blank" class="btn">
           <i class="fa fa-fire fa-4x"></i></a>
         <a title="GitHub" href="https://www.github.com/ceciliaconsta3" target="_blank" class="btn">
@@ -108,7 +104,7 @@ and listening to the outstanding tech panels and presentations
           <i class="fa fa-linkedin fa-4x"></i></a>
         <a title="Twitter" href="https://twitter.com/ceciliaconsta3/" target="_blank" class="btn">
           <i class="fa fa-twitter fa-4x"></i></a>
-      </div>
+      </div> -->
     <img id="scroll-icon" alt="Scroll down" src="src/assets/icons/013-hand.png">
   </section>
 
@@ -133,7 +129,7 @@ and listening to the outstanding tech panels and presentations
     </header>
     <!-- Soka Studio-->
     <div>
-    <figure><img src="src/assets/images/soka-large.png" alt="Soka.Studio home page"></figure>
+    <figure><a href="http://soka.studio" target="_blank"><img src="src/assets/images/soka-large.png" alt="Soka.Studio home page"></a></figure>
     <div class="vertical-align">
       <h4>Soka Studio</h4>
       <h5>Museum Guide Site</h5>
@@ -143,7 +139,7 @@ and listening to the outstanding tech panels and presentations
   </div>
   <!-- America --> 
   <div>  
-    <figure class="flex-item-2"><img src="src/assets/images/atb-large.png" alt="America the Bilingual website"></figure>
+    <figure class="flex-item-2"><a href="http://americathebilingual.com" target="_blank"><img src="src/assets/images/atb-large.png" alt="America the Bilingual website"></a></figure>
     <div class="vertical-align flex-item-1">
       <h4>America the Bilingual</h4>
       <h5>Bilingualism</h5>
@@ -153,7 +149,7 @@ and listening to the outstanding tech panels and presentations
   </div> 
     <!-- Student Project-->
     <div>
-      <figure><img src="src/assets/images/wgu-large.png" alt="Cecilia's WGU Student Project"></figure>
+      <figure><a href="http://cmcclod.mystudenthosting.com" target="_blank"><img src="src/assets/images/wgu-large.png" alt="Cecilia's WGU Student Project"></a></figure>
       <div class="vertical-align">
         <h4>Starter Site</h4>
         <h5>WGU Student Project</h5>
@@ -163,7 +159,7 @@ and listening to the outstanding tech panels and presentations
     </div>
     <!-- NCT-->  
     <div>    
-      <figure class="flex-item-2"><img src="src/assets/images/nct-large.png" alt="NCT Coming Soon page"></figure>
+      <figure class="flex-item-2"> <a href="http://nctzen.net" target="_blank"><img src="src/assets/images/nct-large.png" alt="NCT Coming Soon page"></a></figure>
       <div class="vertical-align flex-item-1">
         <h4>NCTzen.net</h4>
         <h5>K-Pop Fansite</h5>
@@ -173,7 +169,7 @@ and listening to the outstanding tech panels and presentations
     </div>
     <!-- Wonder Woman -->
     <div>
-      <figure><img src="src/assets/images/ww-large.png" alt="Wonder Woman Tribute site"></figure>
+      <figure><a href="https://s.codepen.io/ceciliaconsta3/debug/weVvBd/mWMoNbeZgRLk" target="_blank"><img src="src/assets/images/ww-large.png" alt="Wonder Woman Tribute site"></a></figure>
       <div class="vertical-align">
         <h4>Wonder Woman</h4>
         <h5>FCC Tribute Page</h5>
@@ -183,7 +179,7 @@ and listening to the outstanding tech panels and presentations
     </div>
     <!-- Web Calculator -->
     <div>
-      <figure class="flex-item-2"><img src="src/assets/images/calc-large.png" alt="Cecilia's Bootstrap calculator"></figure>
+      <figure class="flex-item-2"><a href="https://s.codepen.io/ceciliaconsta3/debug/rzRNMv/xnkabdjJzgOM" target="_blank"><img src="src/assets/images/calc-large.png" alt="Cecilia's Bootstrap calculator"></a></figure>
       <div class="vertical-align flex-item-1">
         <h4>Web Calculator</h4>
         <h5>A Bootstrap calculator</h5>
@@ -207,7 +203,7 @@ and listening to the outstanding tech panels and presentations
       </ul> 
 
     <!-- Social Icons -->
-    <div class="btn-group social-icons">
+    <div id="social-icons" class="btn-group social-icons">
       <a title="Free Code Camp" href="https://www.freecodecamp.com/ceciliaconsta3" target="_blank" class="btn">
         <i class="fa fa-fire fa-4x"></i></a>
       <a title="GitHub" href="https://www.github.com/ceciliaconsta3" target="_blank" class="btn">

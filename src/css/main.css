@@ -201,11 +201,14 @@ ul {
 
 .social-icons {
   display: inline-flex;
+  position: absolute;
+  bottom: 10%;
+  justify-content: center;
 }
 
 /************ IDs *************/
 #about {
-  background-color: #f9f9f9;
+  background-color: rgba(153, 153, 153, 0.133);
 }
 
 #about,
@@ -221,9 +224,13 @@ ul {
 }
 
 #contact ul {
-  margin: 3% 0;
+  margin-top: 2%;
   line-height: 1.5;
   padding: 0;
+}
+
+#contact ul a {
+  font-size: 1.3rem;
 }
 
 #contact ul a:hover {
@@ -280,7 +287,11 @@ ul {
   margin: 8% 0;
 }
 
-#projects p:not(first-of-type) {
+#projects h3 + p {
+  padding: 0;
+}
+
+#projects p {
   padding: 0 10%;
   margin: 0;
 }
@@ -291,14 +302,15 @@ ul {
   padding: 1% 4%;
   margin: 3% 0;
   text-transform: uppercase;
-  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  transition: background-color 0.1s ease-in, color 0.1s ease-in;
   font-weight: 700;
   font-size: 1.3rem;
 }
 
 #projects .btn-default:hover {
   color: #f5f5f5;
-  background-color: #18c5c3;
+  background: #18c5c3;
+  box-shadow: 1px 2px 7px #888;
 }
 
 #mobile-menu {
