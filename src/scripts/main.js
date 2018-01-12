@@ -12,6 +12,11 @@ function showNav() {
     $("#overlay a").on("click", function (){
         $("#overlay").toggle(false);
     });
+    var social = document.getElementById("social-icons");
+    var mobile = document.getElementById("mobile-social-icons");
+    mobile.append(social);  
+    mobile.style.position = "absolute";
+    mobile.style.bottom = "5%";
 }
 
 function navFlex() {
@@ -45,6 +50,7 @@ document.addEventListener("scroll", function () {
         menu.style.background = "transparent";
         }
 });
+
 
 
  /*
