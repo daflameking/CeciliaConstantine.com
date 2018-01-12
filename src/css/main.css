@@ -287,7 +287,11 @@ ul {
   margin: 8% 0;
 }
 
-#projects p:not(first-of-type) {
+#projects h3 + p {
+  padding: 0;
+}
+
+#projects p {
   padding: 0 10%;
   margin: 0;
 }

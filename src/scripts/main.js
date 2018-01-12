@@ -1,7 +1,10 @@
+$(window).ready( function() {
+    changeScrollerIcon();
+});
+
 $(document).ready(function(){
     showNav(); 
     navFlex();
-    changeScrollerIcon();
     printCurrentYear();
 });
 
