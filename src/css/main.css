@@ -302,14 +302,15 @@ ul {
   padding: 1% 4%;
   margin: 3% 0;
   text-transform: uppercase;
-  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  transition: background-color 0.1s ease-in, color 0.1s ease-in;
   font-weight: 700;
   font-size: 1.3rem;
 }
 
 #projects .btn-default:hover {
   color: #f5f5f5;
-  background-color: #18c5c3;
+  background: #18c5c3;
+  box-shadow: 1px 2px 7px #888;
 }
 
 #mobile-menu {

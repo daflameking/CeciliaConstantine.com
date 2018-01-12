@@ -8,6 +8,10 @@
   background-image: -moz-linear-gradient(to top right, rgba(5,229,239,0.7), $blue ), url('../assets/images/presentation.jpg');  /* For Firefox 3.6 to 15 */
 }
 
+@mixin shadow {
+  box-shadow: 1px 2px 7px #888;
+}
+
 
 /************ Color Palette *************/
 $red: #f77;
@@ -18,6 +22,7 @@ $dark-teal: #18c5c3;
 $blue: rgba(17,113,200,1);
 $dark-grey: #555;
 $light-grey: rgba(153, 153, 153, 0.133);
+$teal-gradient: linear-gradient(to top, $sea-green, $dark-teal );
 
 
 /************ Animations *************/
@@ -342,7 +347,7 @@ ul {
       padding: 1% 4%;
       margin: 3% 0;
       text-transform: text(caps);
-      transition: background-color 0.2s ease-in, color 0.2s ease-in; 
+      transition: background-color 0.1s ease-in, color 0.1s ease-in; 
         font: {
         weight: text(heavy);
         size: text(small);
@@ -350,7 +355,8 @@ ul {
 
     &:hover {
       color: $white;
-      background-color: $dark-teal;
+      background: $dark-teal;
+      @include shadow;
     }
   }
 }
