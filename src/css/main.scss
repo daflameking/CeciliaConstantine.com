@@ -7,12 +7,6 @@
   background-image: -o-linear-gradient(to top right, rgba(5,229,239,0.7), $blue ), url('../assets/images/presentation.jpg'); /* For Opera 11.1 to 12.0 */
   background-image: -moz-linear-gradient(to top right, rgba(5,229,239,0.7), $blue ), url('../assets/images/presentation.jpg');  /* For Firefox 3.6 to 15 */
 }
-@mixin box-ordinal-group($number) {
-  -moz-box-ordinal-group:$number;      
-  -webkit-box-ordinal-group:$number;      
-  box-ordinal-group:$number;      
-  margin: 10px;       
-}
 
 
 /************ Color Palette *************/
@@ -70,10 +64,10 @@ $breakpoints: (
 
 $mobile-font: (
   xsmall: 0.60rem,
-  small: 1.2rem,
+  small: 1.3rem,
   medium: 2rem,
-  large: 3rem,
-  xlarge: 5rem,
+  large: 4rem,
+  xlarge: 4rem,
   cursive: "Satisfy",
   normal:'Roboto',
   block: 'Open Sans Condensed',
@@ -83,26 +77,24 @@ $mobile-font: (
 
 $media-font: (
   tablet: 6rem,
-  laptop: 8rem,
-  desktop: 10rem
+  laptop: 9rem,
+  desktop: 11rem
 );
 
 
 /************ Functions *************/
-/*
-TODO: Add function if device screen is less than 500px
-swap out #home img to the pointer 
-*/
 @function z($key) {
   @if map-has-key($z-index,$key) {
     @return map-get($z-index, $key);
   }
 }
+
 @function screen($key) {
   @if map-has-key($breakpoints,$key) {
     @return map-get($breakpoints, $key);
   }
 }
+
 @function text($key) {
   @if map-has-key($mobile-font,$key) {
     @return map-get($mobile-font,$key);
@@ -111,6 +103,7 @@ swap out #home img to the pointer
     @return null;
   }
 }
+
 @function lg-text($key) {
   @if map-has-key($media-font,$key) {
     @return map-get($media-font, $key);
@@ -120,14 +113,7 @@ swap out #home img to the pointer
 
 /************ Placeholders *************/
 %center { text-align: center; }
-%span {
-  position: relative;
-  display: block;
-  background: $white;
-  height: 4px;
-  margin: 12% 20%;
 
-}
 %center-whole {
   display: flex;
   flex-direction: column;
@@ -136,17 +122,29 @@ swap out #home img to the pointer
   padding:0;
 }
 
+%span {
+  position: relative;
+  display: block;
+  background: $white;
+  height: 4px;
+  margin: 12% 20%;
+
+}
+
+
 /************ Elements *************/
 html { font-size: 16px; }
 
 a {
   color: $blue;
+
   &:hover,
   &:active {
     color: $pink;
     text-decoration: none;
   }
 }
+
 body {
   font: {
     family: text(normal);
@@ -155,11 +153,15 @@ body {
   overflow-x: hidden;
   background: #fff;
 }
+
 footer {
   position: absolute;
   bottom: 0;
+  margin: 0;
+  padding: 0;
   font-size: text(xsmall);
   margin-top: 4.5%;
+
   .heart-icon {
     color: $red;
   }
@@ -169,42 +171,40 @@ h1 {
   font-size: text(xlarge);
   font-family: text(cursive);
 }
+
 h2, h3, h4, h5 {
   font-family: text(block);
   text-transform: text(caps);
   font-weight: text(heavy);
   @extend %center;
 }
-h2 {
-  top: 3%;
-}
-.banner {
-  position: absolute;
-  font-size: text(small);
-  color: $white;
-}
+
+h2 { top: 3%; }
 h3 { font-size: text(xlarge); }
 h4 { font-size: text(large); }
 h5 { font-size: text(medium); }
-h3, h4 { color: $dark-teal; }
+
+h3, 
+h4 { color: $dark-teal; }
 
 nav {
   display: flex;
   background: #18c5c3;
-  @extend %center;
   z-index: z(overlay);
   position: fixed;
   height: 100vh;
   width: 100vw;
+  @extend %center;
   @extend %center-whole;
-  li {
-    padding: 0 3%;
-  }
+
+  li { padding: 0 3%;  }
+
   a {
 		text-decoration: none;
-		color:  $white;
+    color:  $white;
+    
     font: {
-      size: text(small);
+      size: text(medium);
       family: text(normal);
       weight: text(heavy);
     }
@@ -212,20 +212,24 @@ nav {
     &:hover { color: #000; }
   }
 }
+
 p {
   color: $dark-grey;
-  @extend %center;
   line-height: 1.5;
   max-width: 600px;
   font-size: text(small);
+  @extend %center;
 }
+
 section {
  @extend %center-whole;
+
   img {
     max-width: 100%;
     height: auto;
   }
 }
+
 ul {
   text-decoration: none;
   list-style: none;
@@ -233,44 +237,46 @@ ul {
 
 
 /************ Classes *************/
-#home span { 
-  @extend %span;
+.banner {
+  position: absolute;
+  font-size: text(small);
+  color: $white;
 }
+
 .fa {
   padding-top: 0;
   padding-bottom: 0;
   font-size: text(medium);
   color: $white;
 }
+
 .fa:visited,
 .fa:hover,
 .fa:active {
   color: $pink;
 }
-.row {
-  div {
-    padding: 0;
-  }
-}
-.vertical-align {
-  @extend %center-whole;
-}
-.social-icons {
-  display: inline-flex;
+
+.row { 
+  div { padding: 0; }
 }
 
+.social-icons {  display: inline-flex; }
+
+.vertical-align { @extend %center-whole; }
+
+
 /************ IDs *************/
-#about {
-  background-color: $light-grey;
-}
-footer {
-  margin: 0;
-  padding: 0;
-}
+#about { background-color: $light-grey; }
+
+#about,
+#contact,
+#home { min-height: 100vh; }
+
 #contact {
   position: relative;
   background: black;
   color: $white;
+
   ul { 
     margin: 3% 0;
     @extend %center;
@@ -278,13 +284,18 @@ footer {
     padding: 0; 
     a:hover { color: $dark-teal;}
   }
-  p, a {  color: $white; }
+  
+  p,
+  a {  color: $white; }
+
   footer p { font-size: text(xsmall); }
 }
+
 #headshot {
   width: 200px;
   margin: 5%;
 }
+
 #home {
   img {
     position: absolute;
@@ -294,44 +305,47 @@ footer {
     animation-duration: 4s;
     animation-iteration-count: infinite;
   }  
+
   color: $white;
-  @include linear-gradient;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  
+  @include linear-gradient;
 }
 
-#contact,
-#home,
-#about {
-  min-height: 100vh;
-}
+#home span { @extend %span; }
+
 #projects {
   padding: 0;
-    header { margin: 8% 0; }
+    
     .vertical-align { margin: 0; }
+    header { margin: 8% 0; }
     p:not(first-of-type) {
       padding: 0 10%;
       margin: 0;
     }
+
     .btn-default {
       border:2px solid $dark-teal;
       border-radius: 5px;
       padding: 1% 4%;
       margin: 3% 0;
       text-transform: text(caps);
-      font: {
-      weight: text(heavy);
-      size: text(small);
+      transition: background-color 0.2s ease-in, color 0.2s ease-in; 
+        font: {
+        weight: text(heavy);
+        size: text(small);
     }
-    transition: background-color 0.2s ease-in, color 0.2s ease-in; 
+
     &:hover {
       color: $white;
       background-color: $dark-teal;
     }
   }
 }
+
 #mobile-menu {
   position: fixed;
   top: 2%;
@@ -350,30 +364,38 @@ footer {
 @media screen and (min-width: screen(xs)) and (max-width: screen(sm)) {
   h2 { left: 25%; }
 }
+
 @media screen and (min-width: screen(sm)) {
   h1 {  font-size: lg-text(tablet); }
   nav a { font-size: text(medium); }
 }
+
 @media screen and (min-width: screen(md)) {
   #mobile-menu { 
     width: 80px;
     height: 80px;
   }  
+
   h1 { font-size:lg-text(laptop); }
+
   nav { 
     flex-direction: row; 
+
     a { 
       padding: 0 4%;
       font-size: text(large);
     }
   }
   .flex-item-1 { order: 1;}
+
   .flex-item-2 { order: 2;}
 }
+
 @media screen and (min-width: screen(lg)) {
   h1 { font-size: lg-text(desktop); }
   nav a { font-size: text(xlarge); }
   figure { width: 50%; }
+
   #projects div { display: flex; }
   #projects .vertical-align { width: 50%; }
 }
