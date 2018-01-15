@@ -70,9 +70,10 @@ $breakpoints: (
 $mobile-font: (
   xsmall: 0.60rem,
   small: 1.3rem,
-  medium: 2rem,
+  medium: 2.5rem,
+  med-large: 3.2rem,
   large: 4rem,
-  xlarge: 4rem,
+  xlarge: 5rem,
   cursive: "Satisfy",
   normal:'Roboto',
   block: 'Open Sans Condensed',
@@ -398,7 +399,7 @@ ul {
 
     a { 
       padding: 0 4%;
-      font-size: text(large);
+      font-size: text(medium);
     }
   }
   .flex-item-1 { order: 1;}
@@ -408,7 +409,7 @@ ul {
 
 @media screen and (min-width: screen(lg)) {
   h1 { font-size: lg-text(desktop); }
-  nav a { font-size: text(xlarge); }
+  nav a { font-size: text(med-large); }
   figure { width: 50%; }
 
   #projects div { display: flex; }
