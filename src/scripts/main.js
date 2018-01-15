@@ -7,7 +7,6 @@ $(document).ready(function(){
     showNav(); 
     navFlex();
     printCurrentYear();
-    duplicate();
 });
 
 function showNav() {
@@ -18,14 +17,6 @@ function showNav() {
         $("#overlay").toggle(false);
     });
 }
-
-// function duplicate () {
-//     var x = document.getElementById("social-icons");
-//     var clone = x.cloneNode(true);
-//     var navDiv = document.getElementById("overlay");
-//     document.navDiv.appendChild(clone);  
-// }
-
 
 function navFlex() {
     $("#overlay").toggle( function(){
