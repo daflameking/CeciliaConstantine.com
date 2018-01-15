@@ -44,17 +44,16 @@ function printCurrentYear () {
 
 document.addEventListener("scroll", function () {
     var menu = document.getElementById("mobile-menu");
-    
+
     if (document.body.scrollTop >= 605) {
         menu.style.background = "#eb8cb6";
-        menu.style.boxShadow = "1px 2px 7px #888";
+        menu.style.boxShadow = "1px 5px 32px -9px #555";
     }
     else {
     menu.style.background = "transparent";
     menu.style.boxShadow = "none";
     }
 });
-
 
 
  /*
