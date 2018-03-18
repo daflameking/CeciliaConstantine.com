@@ -40,7 +40,6 @@ which introduced Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
   <title>Cecilia Constantine - Web & Software Development</title>
 
   <!-- Vendor Components -->
-  <link rel="stylesheet" href="node_modules/material-components-web/dist/material-components-web.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
   <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -62,7 +61,7 @@ which introduced Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
     <!--Header-->
     <section id="home" class="container-fluid text-center" role="banner">
         <button type="button" id="mobile-menu">
-          <i id="menu-icon" class="material-icons mdc-button__icon md-36">menu</i>
+          <i id="menu-icon" class="material-icons mdc-button__icon md-48">menu</i>
             <!-- <span class="nav-bar"></span>
             <span class="nav-bar"></span>
             <span class="nav-bar"></span>   -->
@@ -152,9 +151,22 @@ which introduced Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
   <section id="contact" class="container-fluid">
       <h3>Let's Talk</h3>
     <p>I'm available for freelance projects</p>
-      <ul id="contact-details">
+      <!-- <ul id="contact-details">
         <li><a title="Send Cecilia an email" href="mail:ceciliaconsta3@gmail.com">ceciliaconsta3@gmail.com</a></li>
-      </ul> 
+      </ul>  -->
+
+  <!-- Contact Form -->
+  <form method="POST" send="mailto:ceciliaconsta3@gmail.com">
+    <label class="sr-only">Name</label>
+    <input type="text" name="name" placeholder="Name" required>
+    <label class="sr-only">Email</label>
+    <input type="email" name="email" placeholder="Email" required>
+    <label class="sr-only">Subject</label>
+    <input type="text" name="subject" placeholder="Subject" required>
+    <label class="sr-only">Message</label>
+    <textarea name="message" placeholder="Leave a message" required></textarea>
+    <button class="btn btn-default form-btn" type="submit" title="Send message">Send Message</button>
+  </form>
 
     <!-- Social Icons -->
     <div id="social-icons" class="btn-group social-icons">
@@ -187,8 +199,6 @@ which introduced Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
 </script>
 
 <!-- Moved to the bottom for faster page loading -->
-<script src="node_modules/material-components-web/dist/material-components-web.js"></script>
-<script>mdc.autoInit()</script>
 <script
 src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
 integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="

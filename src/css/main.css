@@ -6,9 +6,9 @@ Author:    Cecilia C Constantine
 Primary use:    Educational 
 -------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:300|Satisfy|Open+Sans+Condensed:700");
-/************ Mixins *************/
-/************ Color Palette *************/
-/************ Animations *************/
+/************************************** MIXINS ***************************************/
+/************************* COLOR PALETTE **************************/
+/************************* ANIMATIONS **************************/
 @keyframes fade-in {
   0%,
   50% {
@@ -51,9 +51,9 @@ Primary use:    Educational
   }
 }
 
-/************ Maps *************/
-/************ Functions *************/
-/************ Placeholders *************/
+/************************* MAPS **************************/
+/************************* FUNCTIONS **************************/
+/************************* PLACEHOLDERS **************************/
 h2, h3, h4, h5, nav, p, #contact ul {
   text-align: center;
 }
@@ -74,7 +74,7 @@ nav, section, .vertical-align {
   margin: 12% 20%;
 }
 
-/************ Elements *************/
+/************************* ELEMENTS **************************/
 html {
   font-size: 16px;
 }
@@ -95,13 +95,54 @@ body {
   background: #fff;
 }
 
+form {
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+form input,
+form textarea {
+  background: transparent;
+  display: block;
+  padding: 5%;
+  margin: 25px auto;
+  box-sizing: border-box;
+  line-height: 1.5;
+  border: 2px solid #18c5c3;
+  border-radius: 15px;
+  outline: none;
+}
+
+form input,
+form textarea,
+form button {
+  min-width: 300px;
+}
+
+form .form-btn {
+  border: 2px solid #eb8cb6;
+  background: transparent;
+  color: #f5f5f5;
+  line-height: 2;
+  margin-bottom: 25px;
+}
+
+form .form-btn:hover,
+form .form-btn:focus {
+  background: #eb8cb6;
+  color: #f5f5f5;
+  box-shadow: none;
+  border-color: transparent;
+  outline: none;
+}
+
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   margin: 0;
   padding: 0;
   font-size: 0.6rem;
-  margin-top: 4.5%;
 }
 
 footer .heart-icon {
@@ -182,17 +223,35 @@ ul {
   list-style: none;
 }
 
-/************ Classes *************/
+/************************* CLASSES **************************/
 .banner {
   position: absolute;
   font-size: 1.3rem;
   color: #f5f5f5;
 }
 
+.btn-default {
+  border: 2px solid #18c5c3;
+  border-radius: 5px;
+  padding: 1% 4%;
+  margin: 3% 0;
+  text-transform: uppercase;
+  transition: background-color 0.1s ease-in, color 0.1s ease-in;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.btn-default:hover {
+  color: #f5f5f5;
+  background: #18c5c3;
+  border-color: transparent;
+  box-shadow: 1px 2px 7px  #888;
+}
+
 .fa {
   padding-top: 0;
   padding-bottom: 0;
-  font-size: 2.5rem;
+  font-size: 1.3rem;
   color: #f5f5f5;
 }
 
@@ -208,12 +267,12 @@ ul {
 
 .social-icons {
   display: inline-flex;
-  position: absolute;
+  position: relative;
   bottom: 10%;
   justify-content: center;
 }
 
-/************ IDs *************/
+/************************* IDs **************************/
 #about {
   background-color: rgba(153, 153, 153, 0.133);
 }
@@ -303,23 +362,6 @@ ul {
   margin: 0;
 }
 
-#projects .btn-default {
-  border: 2px solid #18c5c3;
-  border-radius: 5px;
-  padding: 1% 4%;
-  margin: 3% 0;
-  text-transform: uppercase;
-  transition: background-color 0.1s ease-in, color 0.1s ease-in;
-  font-weight: 700;
-  font-size: 1.3rem;
-}
-
-#projects .btn-default:hover {
-  color: #f5f5f5;
-  background: #18c5c3;
-  box-shadow: 1px 2px 7px  #888;
-}
-
 #mobile-menu {
   position: fixed;
   top: 2%;
@@ -333,7 +375,7 @@ ul {
   outline: none;
 }
 
-/************ Media Queries *************/
+/************************* MEDIA QUERIES  *************************/
 @media screen and (min-width: 320px) and (max-width: 470px) {
   h2 {
     left: 25%;
