@@ -1,33 +1,45 @@
 // Load before other elements so user doesn't see the switch
 $(window).ready(function() {
     changeScrollerIcon();
+    $("#overlay").toggle(false);
 });
 
 $(document).ready(function() {
     showNav();
-    navFlex();
+    closeNavWithLinks();
+    // closeNav();
     printCurrentYear();
+    // closeMenuToggle();
 });
 
 
 // METHODS
-function showNav() {
+function showNav() { 
     $("#mobile-menu").on("click", (function() {
-        $("#overlay").toggle();
+        $("#overlay").toggle(true);
+        $("#overlay").css("display", "flex");
+        $("#menu-icon").text("close");
     }));
+}
 
+
+// function closeMenuToggle() {
+//     $("#menu-icon").change( function() {
+//         $("#menu-icon").onclick = closeNav;
+//     });   
+// }
+
+// function closeNav(){
+//     $("#overlay").toggle(false);
+// }
+
+function closeNavWithLinks(){
     $("#overlay a").on("click", function() {
         $("#overlay").toggle(false);
-    });
+        $("#menu-icon").text("menu");  
+    });   
 }
 
-function navFlex() {
-    $("#overlay").toggle(function() {
-        while ($(this).toggle(true)) {
-            $("#overlay").css("display", "flex");
-        }
-    });
-}
 
 function changeScrollerIcon() {
     if ($(window).width() >= 650) {
@@ -56,3 +68,5 @@ document.addEventListener("scroll", function() {
         menu.style.boxShadow = "none";
     }
 });
+
+

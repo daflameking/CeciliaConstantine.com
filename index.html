@@ -1,28 +1,21 @@
 <!--
-So happy you made it
-Now, before you start diving in I want you to know that this site is 
-not done...
-Egads! How dare she publish such a grotesque monster!
-Don't worry, I'm working on it
-and while I'm working on it, I'm teaching myself new things
-New projects will be posted from time to time
-Those projects are an extension of my knowledge and whim
-So yeah, you may check in one week and see something that
-just didn't really work out (to put it nicely)
-I know
-Things will get better, there's more good to come
-More fun to be had
-And besides, imagine how ever so proud you'll be in the future 
-to see how far I've come?
+Hey there
+Nice of you to stop by
+FYI, this site is experimental
+I'll occasionally swap out some components
+with newer doodads and
+post new projects from time to time
+Check back occasionally to see what's new
 
 -------------------------------
 Cecilia Camille Constantine
 "A journey of a thousand miles begins with a single step - Lao Tzu"
 
-What's New: 
-New term, new language
-Taking C169: Scripting and Programming 
-which introduces Java, Eclipse/Netbeans, and how to write flow charts, pseudocode, algorithms, and other programming fundamentals
+What's New in School: 
+Taking C170: Database Management Applications
+learning more about SQL queries, relational databases, and Big Data
+Finished C169: Scripting and Programming 
+which introduced Java, Eclipse/Netbeans, and how to write flow charts, pseudocode, algorithms, and other programming fundamentals
 -->  
 
 <html class="no-js"> <!--<![endif]-->
@@ -46,17 +39,13 @@ which introduces Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
   <meta name="description" content="Cecilia Constantine does front end web and software development"> 
   <title>Cecilia Constantine - Web & Software Development</title>
 
+  <!-- Vendor Components -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
   <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
-  <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="src/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <script
-  src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-  crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="src/scripts/main.js"></script>
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="src/css/main.css">
 </head>
 
 <body>
@@ -65,20 +54,20 @@ which introduces Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <!-- Loads when nav is toggled -->
-      <div id="nav-social-icons" class="btn-group social-icons"></div>      
+      <a href="#contact">Contact</a>    
     </nav>
 
     <main>
     <!--Header-->
     <section id="home" class="container-fluid text-center" role="banner">
-        <button id="mobile-menu">
+        <button type="button" id="mobile-menu">
+          <i id="menu-icon" class="material-icons mdc-button__icon md-48">menu</i>
+            <!-- <span class="nav-bar"></span>
             <span class="nav-bar"></span>
-            <span class="nav-bar"></span>
-            <span class="nav-bar"></span>  
+            <span class="nav-bar"></span>   -->
         </button>
-      <h2 class="banner">Front End Web Development</h2>
+
+      <h2 class="banner">Front End Web & Java Development</h2>
       <h1>Cecilia Constantine</h1>
     <img id="scroll-icon" alt="Scroll down" src="src/assets/icons/013-hand.png">
   </section>
@@ -88,7 +77,7 @@ which introduces Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
   <section id="about" class="container-fluid">
     <img id="headshot" src="src/assets/images/headshot-circle.png" alt="Cecilia's beautiful face">
     <h3>About</h3>
-    <p>I'm a front-end web developer and software development student currently based in sunny South Florida. I'd like to help the world "with my own two hands" and so I love the idea of coding for a cause. I'm constantly learning and growing my skills. I enjoy Material Design, FFXV, practicing minimalism, learning Korean, and overindulging on sugary sweets.</p>
+    <p>I'm a front-end web developer and software development student currently based in sunny South Florida. I'd like to help the world "with my own two hands" and so I love the idea of coding for a cause. I'm constantly learning and growing my skills. I enjoy Material Design, practicing minimalism, and learning Korean.</p>
   </section>
 
 <!--Projects -->
@@ -103,7 +92,7 @@ which introduces Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
     <div class="vertical-align">
       <h4>Soka Studio</h4>
       <h5>Museum Guide Site</h5>
-      <p>Built in WordPress and modified using HTML5 and CSS3</p>
+      <p>WordPress, HTML5, CSS3, Responsive Design</p>
       <a class="btn btn-default" target="_blank" role="button">View Site</a>
     </div>
   </div>
@@ -112,8 +101,8 @@ which introduces Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
     <figure class="flex-item-2"><a href="http://americathebilingual.com" target="_blank"><img src="src/assets/images/atb-large.png" alt="America the Bilingual website"></a></figure>
     <div class="vertical-align flex-item-1">
       <h4>America the Bilingual</h4>
-      <h5>Bilingualism</h5>
-      <p>A patriotic WordPress site to further the outreach of bilingualism in the US</p>
+      <h5>Site seeking to further the outreach of bilingualism</h5>
+      <p>WordPress, HTML5, CSS3, JQuery, Responsive Design</p>
       <a href="http://americathebilingual.com" target="_blank" class="btn btn-default" role="button">View Site</a>
     </div>
   </div> 
@@ -123,7 +112,7 @@ which introduces Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
       <div class="vertical-align">
         <h4>Starter Site</h4>
         <h5>WGU Student Project</h5>
-        <p>Built entirely from scratch using HTML5 and CSS3</p>
+        <p>HTML5, CSS3, Responsive Design</p>
         <a href="http://cmcclod.mystudenthosting.com" target="_blank" class="btn btn-default" role="button">View Site</a>
       </div>
     </div>
@@ -133,7 +122,7 @@ which introduces Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
       <div class="vertical-align flex-item-1">
         <h4>NCTzen.net</h4>
         <h5>K-Pop Fansite</h5>
-        <p>The Coming Soon page was created with HTML5, CSS3. The site will be made in WordPress</p>
+        <p>Coming Soon</p>
         <a href="http://nctzen.net" target="_blank" class="btn btn-default" role="button">Coming Soon</a>
       </div>
     </div>
@@ -143,7 +132,7 @@ which introduces Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
       <div class="vertical-align">
         <h4>Wonder Woman</h4>
         <h5>FCC Tribute Page</h5>
-        <p>Built entirely from scratch using HTML5, CSS3, and the Bootstrap framework</p>
+        <p>Visual Studio Code, HTML5, CSS3, Bootstrap 3</p>
         <a href="https://s.codepen.io/ceciliaconsta3/debug/weVvBd/mWMoNbeZgRLk" target="_blank" class="btn btn-default" role="button">Tribute</a>
       </div>
     </div>
@@ -152,7 +141,7 @@ which introduces Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
       <figure class="flex-item-2"><a href="https://s.codepen.io/ceciliaconsta3/debug/rzRNMv/xnkabdjJzgOM" target="_blank"><img src="src/assets/images/calc-large.png" alt="Cecilia's Bootstrap calculator"></a></figure>
       <div class="vertical-align flex-item-1">
         <h4>Web Calculator</h4>
-        <h5>A Bootstrap calculator</h5>
+        <p>HTML5, CSS3, Bootstrap 3, JavaScript, JQuery</p>
         <a href="https://s.codepen.io/ceciliaconsta3/debug/rzRNMv/xnkabdjJzgOM" target="_blank" class="btn btn-default" role="button">Calculator</a>
       </div>
     </div>
@@ -161,10 +150,23 @@ which introduces Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
   <!-- Contact -->
   <section id="contact" class="container-fluid">
       <h3>Let's Talk</h3>
-    <p>I'm available for freelance projects and full-time employment</p>
-      <ul id="contact-details">
+    <p>I'm available for freelance projects</p>
+      <!-- <ul id="contact-details">
         <li><a title="Send Cecilia an email" href="mail:ceciliaconsta3@gmail.com">ceciliaconsta3@gmail.com</a></li>
-      </ul> 
+      </ul>  -->
+
+  <!-- Contact Form -->
+  <form method="POST" send="mailto:ceciliaconsta3@gmail.com">
+    <label class="sr-only">Name</label>
+    <input type="text" name="name" placeholder="Name" required>
+    <label class="sr-only">Email</label>
+    <input type="email" name="email" placeholder="Email" required>
+    <label class="sr-only">Subject</label>
+    <input type="text" name="subject" placeholder="Subject" required>
+    <label class="sr-only">Message</label>
+    <textarea name="message" placeholder="Leave a message" required></textarea>
+    <button class="btn btn-default form-btn" type="submit" title="Send message">Send Message</button>
+  </form>
 
     <!-- Social Icons -->
     <div id="social-icons" class="btn-group social-icons">
@@ -195,6 +197,15 @@ which introduces Java, Eclipse/Netbeans, and how to write flow charts, pseudocod
 
   gtag('config', 'UA-114065153-1');
 </script>
+
+<!-- Moved to the bottom for faster page loading -->
+<script
+src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Custom Scripts -->
+<script src="src/scripts/main.js"></script>
 
 </body>
 </html>

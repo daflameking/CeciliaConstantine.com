@@ -8,7 +8,7 @@ Primary use:    Educational
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300|Satisfy|Open+Sans+Condensed:700');
 
-/************ Mixins *************/
+/************************************** MIXINS ***************************************/
 @mixin linear-gradient {
   background-image: linear-gradient(to top right, rgba(5,229,239,0.7), $blue ), url('../assets/images/presentation.jpg');
   background-image: -webkit-linear-gradient(to top right, rgba(5,229,239,0.7), $blue ), url('../assets/images/presentation.jpg'); /* For Safari 5.1 to 6.0 */
@@ -21,7 +21,8 @@ Primary use:    Educational
 }
 
 
-/************ Color Palette *************/
+
+/************************* COLOR PALETTE **************************/
 $red: #f77;
 $pink: #eb8cb6;
 $white: #f5f5f5;
@@ -33,7 +34,8 @@ $light-grey: rgba(153, 153, 153, 0.133);
 $teal-gradient: linear-gradient(to top, $sea-green, $dark-teal );
 
 
-/************ Animations *************/
+
+/************************* ANIMATIONS **************************/
 @keyframes fade-in {
   0%,
   50% {
@@ -58,7 +60,9 @@ $teal-gradient: linear-gradient(to top, $sea-green, $dark-teal );
 100% { transform: scale(1); }
 }
 
-/************ Maps *************/
+
+
+/************************* MAPS **************************/
 $z-index: (
   background: 1,
   scroll-icon: 10, 
@@ -96,7 +100,8 @@ $media-font: (
 );
 
 
-/************ Functions *************/
+
+/************************* FUNCTIONS **************************/
 @function z($key) {
   @if map-has-key($z-index,$key) {
     @return map-get($z-index, $key);
@@ -125,7 +130,8 @@ $media-font: (
 }
 
 
-/************ Placeholders *************/
+
+/************************* PLACEHOLDERS **************************/
 %center { text-align: center; }
 
 %center-whole {
@@ -146,7 +152,8 @@ $media-font: (
 }
 
 
-/************ Elements *************/
+
+/************************* ELEMENTS **************************/
 html { font-size: 16px; }
 
 a {
@@ -168,13 +175,51 @@ body {
   background: #fff;
 }
 
+form {
+  margin: 0 auto;
+  font-weight: text(heavy);
+  font-size: text(small);
+  input,
+  textarea {
+    background: transparent;
+    display: block;
+    padding: 5%;
+    margin: 25px auto;
+    box-sizing: border-box;
+    line-height: 1.5;
+    border: 2px solid $dark-teal;
+    border-radius: 15px;
+    outline: none;
+  }
+  input,
+  textarea,
+  button {
+    min-width: 300px;
+  }
+  .form-btn {
+    border: 2px solid $pink;
+    background: transparent;
+    color: $white;
+    line-height: 2;
+    margin-bottom: 25px;    
+  }
+
+    .form-btn:hover,
+    .form-btn:focus {
+      background: $pink;
+      color: $white;
+      box-shadow: none;
+      border-color: transparent;
+      outline: none;
+    }    
+  }
+
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   margin: 0;
   padding: 0;
   font-size: text(xsmall);
-  margin-top: 4.5%;
 
   .heart-icon {
     color: $red;
@@ -250,17 +295,38 @@ ul {
 }
 
 
-/************ Classes *************/
+
+/************************* CLASSES **************************/
 .banner {
   position: absolute;
   font-size: text(small);
   color: $white;
 }
 
+.btn-default {
+  border:2px solid $dark-teal;
+  border-radius: 5px;
+  padding: 1% 4%;
+  margin: 3% 0;
+  text-transform: text(caps);
+  transition: background-color 0.1s ease-in, color 0.1s ease-in; 
+    font: {
+    weight: text(heavy);
+    size: text(small);
+    }
+}
+
+  .btn-default:hover {
+    color: $white;
+    background: $dark-teal;
+    border-color: transparent;
+    @include shadow;
+  }
+
 .fa {
   padding-top: 0;
   padding-bottom: 0;
-  font-size: text(medium);
+  font-size: text(small);
   color: $white;
 }
 
@@ -276,7 +342,7 @@ ul {
 
 .social-icons {  
   display: inline-flex;
-  position: absolute;
+  position: relative;
   bottom: 10%;
   justify-content: center;
 }
@@ -284,7 +350,7 @@ ul {
 .vertical-align { @extend %center-whole; }
 
 
-/************ IDs *************/
+/************************* IDs **************************/
 #about { background-color: $light-grey; }
 
 #about,
@@ -349,25 +415,6 @@ ul {
       padding: 0 10%;
       margin: 0;
     }
-
-    .btn-default {
-      border:2px solid $dark-teal;
-      border-radius: 5px;
-      padding: 1% 4%;
-      margin: 3% 0;
-      text-transform: text(caps);
-      transition: background-color 0.1s ease-in, color 0.1s ease-in; 
-        font: {
-        weight: text(heavy);
-        size: text(small);
-    }
-
-    &:hover {
-      color: $white;
-      background: $dark-teal;
-      @include shadow;
-    }
-  }
 }
 
 #mobile-menu {
@@ -384,7 +431,7 @@ ul {
 }
 
 
-/************ Media Queries *************/
+/************************* MEDIA QUERIES  *************************/
 @media screen and (min-width: screen(xs)) and (max-width: screen(sm)) {
   h2 { left: 25%; }
 }
