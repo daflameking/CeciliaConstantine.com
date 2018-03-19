@@ -1,45 +1,38 @@
-// Load before other elements so user doesn't see the switch
+// These need to be loaded before other elements so user doesn't see the switch
 $(window).ready(function() {
     changeScrollerIcon();
     $("#overlay").toggle(false);
 });
 
-$(document).ready(function() {
+$(document).ready(function() { 
+    changeNavIcon(); 
     showNav();
     closeNavWithLinks();
-    // closeNav();
     printCurrentYear();
-    // closeMenuToggle();
 });
 
 
 // METHODS
 function showNav() { 
-    $("#mobile-menu").on("click", (function() {
-        $("#overlay").toggle(true);
-        $("#overlay").css("display", "flex");
-        $("#menu-icon").text("close");
-    }));
+    $("#mobile-menu").on("click", function() {
+        $("#overlay").toggle();   
+    });
 }
 
-
-// function closeMenuToggle() {
-//     $("#menu-icon").change( function() {
-//         $("#menu-icon").onclick = closeNav;
-//     });   
-// }
-
-// function closeNav(){
-//     $("#overlay").toggle(false);
-// }
+function changeNavIcon() {
+    $("#mobile-menu").on("click", function() {
+    $("#menu-icon").text(
+        $("#menu-icon").text() == "close" ? "menu" : "close"
+    )
+    });
+}
 
 function closeNavWithLinks(){
     $("#overlay a").on("click", function() {
-        $("#overlay").toggle(false);
-        $("#menu-icon").text("menu");  
+        $("#overlay").toggle(false); 
+        $("#menu-icon").text("menu");
     });   
 }
-
 
 function changeScrollerIcon() {
     if ($(window).width() >= 650) {
