@@ -21,8 +21,8 @@ function showNav() {
 
 function changeNavIcon() {
     $("#mobile-menu").on("click", function() {
-    $("#menu-icon").text($("#menu-icon").text() == "close" 
-    ? "menu" : "close" 
+    $("#menu-icon").text(
+        $("#menu-icon").text() == "close" ? "menu" : "close"
     )
     });
 }
@@ -30,6 +30,7 @@ function changeNavIcon() {
 function closeNavWithLinks(){
     $("#overlay a").on("click", function() {
         $("#overlay").toggle(false); 
+        $("#menu-icon").text("menu");
     });   
 }
 
