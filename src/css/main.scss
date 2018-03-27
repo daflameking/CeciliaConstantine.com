@@ -196,6 +196,7 @@ form {
   button {
     min-width: 300px;
   }
+
   .form-btn {
     border: 2px solid $pink;
     background: transparent;
@@ -211,7 +212,12 @@ form {
       box-shadow: none;
       border-color: transparent;
       outline: none;
-    }    
+    }  
+    
+  .form-gotcha  {
+    display: none;
+  }
+  
   }
 
 footer {

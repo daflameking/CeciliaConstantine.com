@@ -137,6 +137,10 @@ form .form-btn:focus {
   outline: none;
 }
 
+form .form-gotcha {
+  display: none;
+}
+
 footer {
   position: relative;
   bottom: 0;
