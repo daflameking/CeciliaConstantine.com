@@ -39,7 +39,7 @@ function closeNavWithLinks(){
 }
 
 function changeScrollerIcon() {
-    var scroller = document.getElementById("scroller-icon");
+    var scroller = document.getElementById("scroll-icon");
     if ($(window).width() >= 650) {
         $(scroller).attr("src", "src/assets/icons/001-mouse-clicker.png");
     } else {
