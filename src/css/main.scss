@@ -219,7 +219,7 @@ form {
   }
   
   }
-
+  
 footer {
   position: relative;
   bottom: 0;
@@ -340,6 +340,13 @@ ul {
 .fa:hover,
 .fa:active {
   color: $pink;
+}
+.fa-twitter {
+  color: $dark-teal;
+}
+
+.form-confirmation {
+  display: none;
 }
 
 .row { 
