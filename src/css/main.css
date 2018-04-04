@@ -265,6 +265,14 @@ ul {
   color: #eb8cb6;
 }
 
+.fa-twitter {
+  color: #18c5c3;
+}
+
+.form-confirmation {
+  display: none;
+}
+
 .row div {
   padding: 0;
 }
