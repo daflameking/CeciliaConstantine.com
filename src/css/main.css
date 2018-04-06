@@ -265,10 +265,6 @@ ul {
   color: #eb8cb6;
 }
 
-.fa-twitter {
-  color: #18c5c3;
-}
-
 .form-confirmation {
   display: none;
 }
@@ -282,6 +278,10 @@ ul {
   position: relative;
   bottom: 10%;
   justify-content: center;
+}
+
+.twitter-feed i {
+  color: #18c5c3;
 }
 
 /************************* IDs **************************/
