@@ -341,9 +341,6 @@ ul {
 .fa:active {
   color: $pink;
 }
-.fa-twitter {
-  color: $dark-teal;
-}
 
 .form-confirmation {
   display: none;
@@ -358,6 +355,10 @@ ul {
   position: relative;
   bottom: 10%;
   justify-content: center;
+}
+
+.twitter-feed i {
+  color: $dark-teal;
 }
 
 .vertical-align { @extend %center-whole; }
