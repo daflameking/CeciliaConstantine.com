@@ -70,8 +70,28 @@ function updateTwitterFeed() {
     xhttp.send();
     // preparing for AJAX call from FCC tutorial by creating a click event handler
     // $("#getmessage").on("click", function() {
-    //     $(".twitter-feed").html("Here is the message!");
-    // });
+    //     $(".twitte
+    
+
+/* Fetch any embeddable Twitter object from the OEmbed API */
+
+// let oembedResponse = await fetch(new Request('https://publish.twitter.com/oembed?url=https://twitter.com/ceciliaconsta3/status/976456784821993472'));
+// let oembedTweet = oembedResponse.json();
+
+// {
+//     "url": "https://twitter.com/ceciliaconsta3/status/976456784821993472",
+//     "author_name": "ceciliaconsta3",
+//     "author_url": "https://twitter.com/ceciliaconsta3",
+//     "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">just setting up my twttr</p>&mdash; jack (@jack) <a href=\"https://twitter.com/jack/status/20\">March 21, 2006</a></blockquote>\n<script async src=\"//platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+//     "width": 550,
+//     "height": null,
+//     "type": "rich",
+//     "cache_age": "3153600000",
+//     "provider_name": "Twitter",
+//     "provider_url": "https://twitter.com",
+//     "version": "1.0"
+//   }
+
 }
 
 document.addEventListener("scroll", function() {
