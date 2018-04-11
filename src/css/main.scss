@@ -9,13 +9,6 @@ Primary use:    Educational
 @import url('https://fonts.googleapis.com/css?family=Roboto:300|Satisfy|Open+Sans+Condensed:700');
 
 /************************************** MIXINS ***************************************/
-@mixin linear-gradient {
-  background-image: linear-gradient(to top right, rgba(5,229,239,0.7), $blue ), url('../assets/images/presentation.jpg');
-  background-image: -webkit-linear-gradient(to top right, rgba(5,229,239,0.7), $blue ), url('../assets/images/presentation.jpg'); /* For Safari 5.1 to 6.0 */
-  background-image: -o-linear-gradient(to top right, rgba(5,229,239,0.7), $blue ), url('../assets/images/presentation.jpg'); /* For Opera 11.1 to 12.0 */
-  background-image: -moz-linear-gradient(to top right, rgba(5,229,239,0.7), $blue ), url('../assets/images/presentation.jpg');  /* For Firefox 3.6 to 15 */
-}
-
 @mixin shadow {
   box-shadow: 1px 2px 7px  #888;
 }
@@ -414,8 +407,7 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
-  @include linear-gradient;
+  background-image: url('/src/assets/images/presentation-min.png');
 }
 
 #home span { @extend %span; }

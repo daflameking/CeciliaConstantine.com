@@ -336,13 +336,7 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: linear-gradient(to top right, rgba(5, 229, 239, 0.7), #1171c8), url("../assets/images/presentation.jpg");
-  background-image: -webkit-linear-gradient(to top right, rgba(5, 229, 239, 0.7), #1171c8), url("../assets/images/presentation.jpg");
-  /* For Safari 5.1 to 6.0 */
-  background-image: -o-linear-gradient(to top right, rgba(5, 229, 239, 0.7), #1171c8), url("../assets/images/presentation.jpg");
-  /* For Opera 11.1 to 12.0 */
-  background-image: -moz-linear-gradient(to top right, rgba(5, 229, 239, 0.7), #1171c8), url("../assets/images/presentation.jpg");
-  /* For Firefox 3.6 to 15 */
+  background-image: url("/src/assets/images/presentation-min.png");
 }
 
 #home img {
@@ -444,4 +438,3 @@ ul {
     width: 50%;
   }
 }
-/*# sourceMappingURL=main.css.map */
