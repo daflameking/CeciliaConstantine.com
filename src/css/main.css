@@ -336,7 +336,7 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url("/src/assets/images/presentation.jpg");
+  background-image: url("/src/assets/images/presentation-min.png");
 }
 
 #home img {
@@ -438,4 +438,3 @@ ul {
     width: 50%;
   }
 }
-/*# sourceMappingURL=main.css.map */

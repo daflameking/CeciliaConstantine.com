@@ -9,6 +9,7 @@ $(document).ready(function() {
     showNav();
     closeNavWithLinks();
     printCurrentYear();
+    // document.getElementById("getmessage").addEventListener("click", updateTwitterFeed);
 });
 
 // GLOBAL VARIABLES
@@ -69,3 +70,8 @@ function scrollToNavLinks() {
 function scrollTop() {
     $("#id").scrollTop($("#id").scrollTop() + 100);
 }
+
+// function scrollTo(id){
+//     $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+// }
+
