@@ -1,0 +1,477 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:    Personal Site
+Author:    Cecilia C Constantine
+Primary use:    Educational 
+-------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300|Satisfy|Open+Sans+Condensed:700');
+
+/************************************** MIXINS ***************************************/
+@mixin shadow {
+  box-shadow: 1px 2px 7px  #888;
+}
+
+/************************* COLOR PALETTE **************************/
+$red: #f77;
+$pink: #eb8cb6;
+$white: #f5f5f5;
+$sea-green: #05e5ef;
+$dark-teal: #18c5c3;
+$blue: rgba(17,113,200,1);
+$dark-grey: #555;
+$light-grey: rgba(153, 153, 153, 0.133);
+$teal-gradient: linear-gradient(to top, $sea-green, $dark-teal );
+
+
+
+/************************* ANIMATIONS **************************/
+@keyframes fade-in {
+  0%,
+  50% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll-more {
+0% { transform: translateY(0); }
+15% { transform: translateY(30%);  }
+30% { transform: translateY(0); }
+45% { transform: translateY(30%);  }
+60% {  transform: translateY(0); }
+70% { transform: scale(1.15); }
+80% { transform: scale(1); }
+90% { transform: scale(1.15); }
+100% { transform: scale(1); }
+}
+
+
+
+/************************* MAPS **************************/
+$z-index: (
+  background: 1,
+  scroll-icon: 10, 
+  overlay: 100,
+  nav-icon: 1000,
+
+);
+
+$breakpoints: (
+  xs: 320px,
+  sm: 470px,
+  md: 650px,
+  lg: 944px,
+  xl: 1165px
+);
+
+$mobile-font: (
+  xsmall: 0.60rem,
+  small: 1.3rem,
+  medium: 2.5rem,
+  med-large: 3.2rem,
+  large: 4rem,
+  xlarge: 5rem,
+  cursive: "Satisfy",
+  normal:'Roboto',
+  block: 'Open Sans Condensed',
+  caps: uppercase,
+  heavy: 700
+);
+
+$media-font: (
+  tablet: 6rem,
+  laptop: 9rem,
+  desktop: 11rem
+);
+
+
+
+/************************* FUNCTIONS **************************/
+@function z($key) {
+  @if map-has-key($z-index,$key) {
+    @return map-get($z-index, $key);
+  }
+}
+
+@function screen($key) {
+  @if map-has-key($breakpoints,$key) {
+    @return map-get($breakpoints, $key);
+  }
+}
+
+@function text($key) {
+  @if map-has-key($mobile-font,$key) {
+    @return map-get($mobile-font,$key);
+  }
+  @else {
+    @return null;
+  }
+}
+
+@function lg-text($key) {
+  @if map-has-key($media-font,$key) {
+    @return map-get($media-font, $key);
+  }
+}
+
+
+
+/************************* PLACEHOLDERS **************************/
+%center { text-align: center; }
+
+%center-whole {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:0;
+}
+
+%span {
+  position: relative;
+  display: block;
+  background: $white;
+  height: 4px;
+  margin: 12% 20%;
+
+}
+
+
+
+/************************* ELEMENTS **************************/
+html { font-size: 16px; }
+
+a {
+  color: $blue;
+
+  &:hover,
+  &:active {
+    color: $pink;
+    text-decoration: none;
+  }
+}
+
+body {
+  font: {
+    family: text(normal);
+  }
+  line-height: 2;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+form {
+  margin: 0 auto;
+  font-weight: text(heavy);
+  font-size: text(small);
+  input,
+  textarea {
+    background: transparent;
+    display: block;
+    padding: 5%;
+    margin: 25px auto;
+    box-sizing: border-box;
+    line-height: 1.5;
+    border: 2px solid $dark-teal;
+    border-radius: 15px;
+    outline: none;
+  }
+  input,
+  textarea,
+  button {
+    min-width: 300px;
+  }
+
+  .form-btn {
+    border: 2px solid $pink;
+    background: transparent;
+    color: $white;
+    line-height: 2;
+    margin-bottom: 25px;    
+  }
+
+    .form-btn:hover,
+    .form-btn:focus {
+      background: $pink;
+      color: $white;
+      box-shadow: none;
+      border-color: transparent;
+      outline: none;
+    }  
+    
+  .form-gotcha  {
+    display: none;
+  }
+  
+  }
+  
+footer {
+  position: relative;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  font-size: text(xsmall);
+
+  .heart-icon {
+    color: $red;
+  }
+}
+
+h1 { 
+  font-size: text(xlarge);
+  font-family: text(cursive);
+}
+
+h2, h3, h4, h5 {
+  font-family: text(block);
+  text-transform: text(caps);
+  font-weight: text(heavy);
+  @extend %center;
+}
+
+h2 { top: 3%; }
+h3 { font-size: text(xlarge); }
+h4 { font-size: text(large); }
+h5 { font-size: text(medium); }
+
+h3, 
+h4 { color: $dark-teal; }
+
+nav {
+  display: flex;
+  background: #18c5c3;
+  z-index: z(overlay);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  @extend %center;
+  @extend %center-whole;
+
+  li { padding: 0 3%;  }
+
+  a {
+		text-decoration: none;
+    color:  $white;
+    
+    font: {
+      size: text(medium);
+      family: text(normal);
+      weight: text(heavy);
+    }
+
+    &:hover { color: #000; }
+  }
+}
+
+p {
+  color: $dark-grey;
+  line-height: 1.5;
+  max-width: 600px;
+  font-size: text(small);
+  @extend %center;
+}
+
+section {
+ @extend %center-whole;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+
+
+/************************* CLASSES **************************/
+.banner {
+  position: absolute;
+  font-size: text(small);
+  color: $white;
+}
+
+.btn-default {
+  border:2px solid $dark-teal;
+  border-radius: 5px;
+  padding: 1% 4%;
+  margin: 3% 0;
+  text-transform: text(caps);
+  transition: background-color 0.1s ease-in, color 0.1s ease-in; 
+    font: {
+    weight: text(heavy);
+    size: text(small);
+    }
+}
+
+  .btn-default:hover {
+    color: $white;
+    background: $dark-teal;
+    border-color: transparent;
+    @include shadow;
+  }
+
+.fa {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: text(small);
+  color: $white;
+}
+
+.fa:visited,
+.fa:hover,
+.fa:active {
+  color: $pink;
+}
+
+.form-confirmation {
+  display: none;
+}
+
+.row { 
+  div { padding: 0; }
+}
+
+.social-icons {  
+  display: inline-flex;
+  position: relative;
+  bottom: 10%;
+  justify-content: center;
+}
+
+.twitter-feed i {
+  color: $dark-teal;
+}
+
+.vertical-align { @extend %center-whole; }
+
+
+/************************* IDs **************************/
+#about { background-color: $light-grey; }
+
+#about,
+#contact,
+#home { min-height: 100vh; }
+
+#contact {
+  position: relative;
+  background: black;
+  color: $white;
+
+  ul { 
+    margin-top: 2%;
+    line-height: 1.5;
+    padding: 0; 
+    @extend %center;
+
+    a { font-size: text(small); }  
+    
+    a:hover { color: $dark-teal; }
+  }
+  
+  p,
+  a {  color: $white; }
+
+  footer p { font-size: text(xsmall); }
+}
+
+#headshot {
+  width: 200px;
+  margin: 5%;
+  border-radius: 50%;
+}
+
+#home {
+  img {
+    position: absolute;
+    bottom: 5%;
+    animation: scroll-more;
+    animation-delay: 1s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }  
+
+  color: $white;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url('/src/assets/images/presentation-min.png');
+}
+
+#home span { @extend %span; }
+
+#projects {
+  padding: 0;
+    
+    .vertical-align { margin: 0; }
+    header { margin: 8% 0; }
+    h3 + p  { padding: 0;}
+    p {
+      padding: 0 10%;
+      margin: 0;
+    }
+}
+
+#mobile-menu {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: transparent;
+  background: transparent;
+  z-index: z(nav-icon);
+  outline: none;
+}
+
+
+/************************* MEDIA QUERIES  *************************/
+@media screen and (min-width: screen(xs)) and (max-width: screen(sm)) {
+  h2 { left: 25%; }
+}
+
+@media screen and (min-width: screen(sm)) {
+  h1 {  font-size: lg-text(tablet); }
+  nav a { font-size: text(medium); }
+}
+
+@media screen and (min-width: screen(md)) {
+  #mobile-menu { 
+    width: 70px;
+    height: 70px;
+  }  
+
+  h1 { font-size:lg-text(laptop); }
+
+  nav { 
+    flex-direction: row; 
+
+    a { 
+      padding: 0 4%;
+      font-size: text(medium);
+    }
+  }
+  .flex-item-1 { order: 1;}
+
+  .flex-item-2 { order: 2;}
+}
+
+@media screen and (min-width: screen(lg)) {
+  h1 { font-size: lg-text(desktop); }
+  nav a { font-size: text(med-large); }
+  figure { width: 50%; }
+
+  #projects div { display: flex; }
+  #projects .vertical-align { width: 50%; }
+}
