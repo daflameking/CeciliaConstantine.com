@@ -300,20 +300,28 @@ ul {
   color: $white;
 }
 
-.btn-default {
+.btn-default,
+.btn-default:link,
+.btn-default:visited,
+.btn-default:active,
+.btn-default:focus,
+ {
   border:2px solid $dark-teal;
   border-radius: 5px;
   padding: 1% 4%;
   margin: 3% 0;
+  background: transparent;
   text-transform: text(caps);
   transition: background-color 0.1s ease-in, color 0.1s ease-in; 
+  outline: none;
     font: {
     weight: text(heavy);
     size: text(small);
     }
 }
 
-  .btn-default:hover {
+  .btn-default:hover,
+  .btn-default:active:hover   {
     color: $white;
     background: $dark-teal;
     border-color: transparent;
