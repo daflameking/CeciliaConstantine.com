@@ -1,0 +1,28 @@
+/************************* FUNCTIONS **************************/
+@function z($key) {
+    @if map-has-key($z-index,$key) {
+      @return map-get($z-index, $key);
+    }
+  }
+  
+  @function screen($key) {
+    @if map-has-key($breakpoints,$key) {
+      @return map-get($breakpoints, $key);
+    }
+  }
+  
+  @function text($key) {
+    @if map-has-key($mobile-font,$key) {
+      @return map-get($mobile-font,$key);
+    }
+    @else {
+      @return null;
+    }
+  }
+  
+  @function lg-text($key) {
+    @if map-has-key($media-font,$key) {
+      @return map-get($media-font, $key);
+    }
+  }
+  

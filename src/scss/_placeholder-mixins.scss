@@ -1,0 +1,25 @@
+  /************************************** MIXINS ***************************************/
+  @mixin shadow {
+    box-shadow: 1px 2px 7px  #888;
+  }
+  
+  
+  /************************* PLACEHOLDERS **************************/
+  %center { text-align: center; }
+  
+  %center-whole {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+  }
+  
+  %span {
+    position: relative;
+    display: block;
+    background: $white;
+    height: 4px;
+    margin: 12% 20%;
+  
+  }

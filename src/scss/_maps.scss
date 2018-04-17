@@ -1,0 +1,36 @@
+/************************* MAPS **************************/
+$z-index: (
+  background: 1,
+  scroll-icon: 10, 
+  overlay: 100,
+  nav-icon: 1000,
+
+);
+
+$breakpoints: (
+  xs: 320px,
+  sm: 470px,
+  md: 650px,
+  lg: 944px,
+  xl: 1165px
+);
+
+$mobile-font: (
+  xsmall: 0.60rem,
+  small: 1.3rem,
+  medium: 2.5rem,
+  med-large: 3.2rem,
+  large: 4rem,
+  xlarge: 5rem,
+  cursive: "Satisfy",
+  normal:'Roboto',
+  block: 'Open Sans Condensed',
+  caps: uppercase,
+  heavy: 700
+);
+
+$media-font: (
+  tablet: 6rem,
+  laptop: 9rem,
+  desktop: 11rem
+);
