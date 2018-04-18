@@ -49,7 +49,7 @@ function changeScrollerIcon() {
 
 function printCurrentYear() {
     var currentYear = new Date().getFullYear();
-    document.getElementById("copy-year").innerHTML = currentYear;
+    document.getElementById("copy-year").textContent = currentYear;
 }
 
 document.addEventListener("scroll", function() {
