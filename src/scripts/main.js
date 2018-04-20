@@ -1,7 +1,6 @@
 // These need to be loaded before other elements so user doesn't see the switch
 $(window).ready(function() {
     changeScrollerIcon();
-    //$(overlay).toggle(false);
 });
 
 $(document).ready(function() { 
@@ -49,7 +48,7 @@ function changeScrollerIcon() {
 
 function printCurrentYear() {
     var currentYear = new Date().getFullYear();
-    document.getElementById("copy-year").innerHTML = currentYear;
+    document.getElementById("copy-year").textContent = currentYear;
 }
 
 document.addEventListener("scroll", function() {
