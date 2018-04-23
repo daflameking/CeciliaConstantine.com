@@ -25,7 +25,7 @@ function showNav() {
 function changeNavIcon() {
     $(mobileMenu).on("click", function() {
     $(icon).text(
-        $(icon).text() == "close" ? "menu" : "close"
+        icon.textContent == "close" ? "menu" : "close"
     )
     });
 }
@@ -38,11 +38,11 @@ function closeNavWithLinks() {
 }
 
 function changeScrollerIcon() {
-    var scroller = document.getElementById("scroll-icon");
+    let scroller = document.getElementById("scroll-icon");
     if ($(window).width() >= 650) {
-        $(scroller).attr("src", "src/assets/icons/001-mouse-clicker.png");
+        scroller.src = "src/assets/icons/001-mouse-clicker.png";
     } else {
-        $(scroller).attr("src", "src/assets/icons/013-hand.png");
+        scroller.src = "src/assets/icons/013-hand.png";
     }
 };
 
@@ -60,11 +60,3 @@ document.addEventListener("scroll", function() {
         mobileMenu.style.boxShadow = "none";
     }
 });
-
-function scrollToNavLinks() {
-    document.getElementById("about").scrollIntoView(true);
-}
-
-function scrollTop() {
-    $("#id").scrollTop($("#id").scrollTop() + 100);
-}
