@@ -54,7 +54,7 @@ form {
   textarea {
     background: transparent;
     display: block;
-    padding: 5%;
+    padding: 3%;
     margin: 25px auto;
     box-sizing: border-box;
     line-height: 1.5;
@@ -92,7 +92,7 @@ form {
   }
   
 footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
   margin: 0;
   padding: 0;
@@ -209,9 +209,7 @@ ul {
   }
 
 .fa {
-  padding-top: 0;
-  padding-bottom: 0;
-  font-size: text(small);
+  padding: 0 text(small);
   color: $white;
 }
 
