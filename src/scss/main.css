@@ -270,7 +270,6 @@ nav {
   z-index: 100;
   position: fixed;
   height: 100vh;
-  width: 100vw;
 }
 
 nav li {
@@ -477,9 +476,18 @@ ul {
 }
 
 /************************* MEDIA QUERIES  *************************/
-@media screen and (min-width: 320px) and (max-width: 470px) {
+@media screen and (min-width: 320px) and (max-width: 944px) {
   h2 {
     left: 25%;
+  }
+  #overlay {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 721px) {
+  #overlay {
+    width: 30vh;
   }
 }
 
@@ -492,7 +500,7 @@ ul {
   }
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 720px) {
   #mobile-menu {
     width: 70px;
     height: 70px;
@@ -500,15 +508,8 @@ ul {
   h1 {
     font-size: 9rem;
   }
-  nav {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
   nav a {
     padding: 0 4%;
-    font-size: 2.4rem;
   }
   .flex-item-1 {
     -webkit-box-ordinal-group: 2;
@@ -525,9 +526,6 @@ ul {
 @media screen and (min-width: 944px) {
   h1 {
     font-size: 11rem;
-  }
-  nav a {
-    font-size: 3rem;
   }
   figure {
     width: 50%;

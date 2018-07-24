@@ -129,7 +129,6 @@ nav {
   z-index: z(overlay);
   position: fixed;
   height: 100vh;
-  width: 100vw;
   @extend %center;
   @extend %center-whole;
 
@@ -323,10 +322,17 @@ ul {
 
 
 /************************* MEDIA QUERIES  *************************/
-@media screen and (min-width: screen(xs)) and (max-width: screen(sm)) {
+@media screen and (min-width: screen(xs)) and (max-width: screen(lg)) {
   h2 { left: 25%; }
+  #overlay {
+    width: 100vw;
+  }
 }
-
+@media screen and (min-width:721px) {
+  #overlay {
+    width: 30vh;
+  }
+}
 @media screen and (min-width: screen(sm)) {
   h1 {  font-size: lg-text(tablet); }
   nav a { font-size: text(medium); }
@@ -341,11 +347,8 @@ ul {
   h1 { font-size:lg-text(laptop); }
 
   nav { 
-    flex-direction: row; 
-
     a { 
       padding: 0 4%;
-      font-size: text(medium);
     }
   }
   .flex-item-1 { order: 1;}
@@ -355,7 +358,6 @@ ul {
 
 @media screen and (min-width: screen(lg)) {
   h1 { font-size: lg-text(desktop); }
-  nav a { font-size: text(med-large); }
   figure { width: 50%; }
 
   #projects div { display: flex; }

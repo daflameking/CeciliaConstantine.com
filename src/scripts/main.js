@@ -11,9 +11,9 @@ $(document).ready(function() {
 });
 
 // GLOBAL VARIABLES
-var mobileMenu = document.getElementById("mobile-menu");
-var overlay = document.getElementById("overlay");
-var icon = document.getElementById("menu-icon");
+let mobileMenu = document.getElementById("mobile-menu");
+let overlay = document.getElementById("overlay");
+let icon = document.getElementById("menu-icon");
 
 // METHODS
 function showNav() { 
