@@ -379,8 +379,7 @@ ul {
 }
 
 #about,
-#contact,
-#home {
+#contact {
   min-height: 100vh;
 }
 
@@ -426,6 +425,7 @@ ul {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url("../assets/images/presentation-min.png");
+  min-height: 55vh;
 }
 
 #home img {
@@ -493,7 +493,7 @@ ul {
 
 @media screen and (min-width: 470px) {
   h1 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   nav a {
     font-size: 2.4rem;
@@ -506,7 +506,7 @@ ul {
     height: 70px;
   }
   h1 {
-    font-size: 9rem;
+    font-size: 7rem;
   }
   nav a {
     padding: 0 4%;
@@ -525,7 +525,7 @@ ul {
 
 @media screen and (min-width: 944px) {
   h1 {
-    font-size: 11rem;
+    font-size: 9rem;
   }
   figure {
     width: 50%;

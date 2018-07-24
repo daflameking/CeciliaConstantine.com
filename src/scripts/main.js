@@ -1,7 +1,7 @@
 // These need to be loaded before other elements so user doesn't see the switch
-$(window).ready(function() {
-    changeScrollerIcon();
-});
+// $(window).ready(function() {
+//     changeScrollerIcon();
+// });
 
 $(document).ready(function() { 
     changeNavIcon(); 
@@ -36,15 +36,6 @@ function closeNavWithLinks() {
         $(icon).text("menu");
     });   
 }
-
-function changeScrollerIcon() {
-    let scroller = document.getElementById("scroll-icon");
-    if ($(window).width() >= 650) {
-        scroller.src = "src/assets/icons/001-mouse-clicker.png";
-    } else {
-        scroller.src = "src/assets/icons/013-hand.png";
-    }
-};
 
 function printCurrentYear() {
     var currentYear = new Date().getFullYear();

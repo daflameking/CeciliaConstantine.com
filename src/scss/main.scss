@@ -244,8 +244,8 @@ ul {
 #about { background-color: $light-grey; }
 
 #about,
-#contact,
-#home { min-height: 100vh; }
+#contact 
+{ min-height: 100vh; }
 
 #contact {
   position: relative;
@@ -291,6 +291,7 @@ ul {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url('../assets/images/presentation-min.png');
+  min-height: 55vh;
 }
 
 #home span { @extend %span; }
