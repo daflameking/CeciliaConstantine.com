@@ -17,11 +17,11 @@ $breakpoints: (
 
 $mobile-font: (
   xsmall: 0.60rem,
-  small: 1.1rem,
-  medium: 2.4rem,
-  med-large: 3rem,
-  large: 4rem,
-  xlarge: 5rem,
+  small: 1rem,
+  medium: 1rem,
+  med-large: 1.75rem,
+  large: 2rem,
+  xlarge: 3rem,
   cursive: "Satisfy",
   normal:'Roboto',
   block: 'Open Sans Condensed',
@@ -31,6 +31,6 @@ $mobile-font: (
 
 $media-font: (
   tablet: 5rem,
-  laptop: 7rem,
-  desktop: 9rem
+  laptop: 5rem,
+  desktop: 7rem
 );

@@ -324,6 +324,7 @@ ul {
 
 /************************* MEDIA QUERIES  *************************/
 @media screen and (min-width: screen(xs)) and (max-width: screen(lg)) {
+  h1 { font-size:lg-text(tablet); }
   h2 { left: 25%; }
   #overlay {
     width: 100vw;
@@ -335,8 +336,7 @@ ul {
   }
 }
 @media screen and (min-width: screen(sm)) {
-  h1 {  font-size: lg-text(tablet); }
-  nav a { font-size: text(medium); }
+  nav a { font-size: text(large); }
 }
 
 @media screen and (min-width: screen(md)) {
@@ -344,8 +344,6 @@ ul {
     width: 70px;
     height: 70px;
   }  
-
-  h1 { font-size:lg-text(laptop); }
 
   nav { 
     a { 
