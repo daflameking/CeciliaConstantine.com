@@ -1,8 +1,4 @@
 // These need to be loaded before other elements so user doesn't see the switch
-// $(window).ready(function() {
-//     changeScrollerIcon();
-// });
-
 $(document).ready(function() { 
     changeNavIcon(); 
     showNav();
@@ -43,7 +39,7 @@ function printCurrentYear() {
 }
 
 document.addEventListener("scroll", function() {
-    if (document.body.scrollTop >= 605) {
+    if (document.body.scrollTop >= 350) {
         mobileMenu.style.background = "#eb8cb6";
         mobileMenu.style.boxShadow = "1px 5px 32px -9px #555";
     } else {
