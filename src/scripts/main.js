@@ -15,6 +15,8 @@ let icon = document.getElementById("menu-icon");
 function showNav() { 
     $(mobileMenu).on("click", function() {
         $(overlay).toggle();   
+        mobileMenu.style.background = "transparent";
+        mobileMenu.style.boxShadow = "none";
     });
 }
 
@@ -40,7 +42,7 @@ function printCurrentYear() {
 
 document.addEventListener("scroll", function() {
     if (document.body.scrollTop >= 350) {
-        mobileMenu.style.background = "#eb8cb6";
+        mobileMenu.style.background = "#18c5c3";
         mobileMenu.style.boxShadow = "1px 5px 32px -9px #555";
     } else {
         mobileMenu.style.background = "transparent";
