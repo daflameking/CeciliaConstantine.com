@@ -1,6 +1,8 @@
+"use strict";
+
 // These need to be loaded before other elements so user doesn't see the switch
-$(document).ready(function() { 
-    changeNavIcon(); 
+$(document).ready(function() {
+    changeNavIcon();
     showNav();
     closeNavWithLinks();
     printCurrentYear();
@@ -12,9 +14,9 @@ let overlay = document.getElementById("overlay");
 let icon = document.getElementById("menu-icon");
 
 // METHODS
-function showNav() { 
+function showNav() {
     $(mobileMenu).on("click", function() {
-        $(overlay).toggle();   
+        $(overlay).toggle();
         mobileMenu.style.background = "transparent";
         mobileMenu.style.boxShadow = "none";
     });
@@ -22,29 +24,30 @@ function showNav() {
 
 function changeNavIcon() {
     $(mobileMenu).on("click", function() {
-    $(icon).text(
-        icon.textContent == "close" ? "menu" : "close"
-    )
+        $(icon).text(
+            icon.textContent == "close" ? "menu" : "close"
+        )
     });
 }
 
-function closeNavAnimation(){
+function closeNavAnimation() {
     // if overlay is visible or
     // if nav has been toggled
     // mobile menu on click event
     // adds slideInLeft  class to that element
     // only when nav is toggled
-    if (icon.textContent === "close") { 
+    if (icon.textContent === "close") {
         $(mobileMenu).on("click", function() {
-            overlay.toggle() == true ? overlay.classList.add("slideInRight"): overlay.classList.add("slideInLeft")
+            overlay.toggle() == true ? overlay.classList.add("slideInRight") : overlay.classList.add("slideInLeft")
         });
     }
 }
+
 function closeNavWithLinks() {
     $("#overlay a").on("click", function() {
-        $(overlay).toggle(false); 
+        $(overlay).toggle(false);
         $(icon).text("menu");
-    });   
+    });
 }
 
 function printCurrentYear() {
