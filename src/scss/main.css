@@ -122,7 +122,7 @@ Primary use:    Educational
 
 /************************************** MIXINS ***************************************/
 /************************* PLACEHOLDERS **************************/
-h2, h3, h4, h5, nav, #contact ul {
+h2, h3, h4, nav, #contact ul {
   text-align: center;
 }
 
@@ -243,7 +243,7 @@ h1 {
   font-family: "Satisfy";
 }
 
-h2, h3, h4, h5 {
+h2, h3, h4 {
   font-family: "Open Sans Condensed";
   text-transform: uppercase;
   font-weight: 700;
@@ -266,7 +266,8 @@ h5 {
 }
 
 h3,
-h4 {
+h4,
+h5 {
   color: #18c5c3;
 }
 
@@ -470,8 +471,20 @@ ul {
 }
 
 #projects p {
-  padding: 0 10%;
   margin: 0;
+}
+
+#projects h5 a,
+#projects h5 a:visited,
+#projects p a,
+#projects p a:visited {
+  color: #18c5c3;
+  text-decoration: none;
+}
+
+#projects h5 a:hover,
+#projects p a:hover {
+  color: #eb8cb6;
 }
 
 #mobile-menu {

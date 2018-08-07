@@ -108,7 +108,7 @@ h1 {
   font-family: text(cursive);
 }
 
-h2, h3, h4, h5 {
+h2, h3, h4 {
   font-family: text(block);
   text-transform: text(caps);
   font-weight: text(heavy);
@@ -121,7 +121,8 @@ h4 { font-size: text(large); }
 h5 { font-size: text(medium); }
 
 h3, 
-h4 { color: $dark-teal; }
+h4,
+h5 { color: $dark-teal; }
 
 header { 
   margin-top: 16px;
@@ -310,8 +311,18 @@ ul {
     .vertical-align { margin: 0; }
     h3 + p  { padding: 0;}
     p {
-      padding: 0 10%;
       margin: 0;
+    }
+    h5,
+    p {
+      a,
+      a:visited { 
+        color: $dark-teal;
+        text-decoration:none;
+      }
+      a:hover {
+        color: $pink;
+      }
     }
 }
 
