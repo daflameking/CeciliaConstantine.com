@@ -28,6 +28,18 @@ function changeNavIcon() {
     });
 }
 
+function closeNavAnimation(){
+    // if overlay is visible or
+    // if nav has been toggled
+    // mobile menu on click event
+    // adds slideInLeft  class to that element
+    // only when nav is toggled
+    if (icon.textContent === "close") { 
+        $(mobileMenu).on("click", function() {
+            overlay.toggle() == true ? overlay.classList.add("slideInRight"): overlay.classList.add("slideInLeft")
+        });
+    }
+}
 function closeNavWithLinks() {
     $("#overlay a").on("click", function() {
         $(overlay).toggle(false); 

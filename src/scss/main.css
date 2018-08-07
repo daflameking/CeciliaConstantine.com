@@ -115,6 +115,11 @@ Primary use:    Educational
   }
 }
 
+.animated {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
 /************************************** MIXINS ***************************************/
 /************************* PLACEHOLDERS **************************/
 h2, h3, h4, h5, nav, #contact ul {
